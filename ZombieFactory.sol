@@ -7,5 +7,5 @@ contract ZombieFactory {
     struct Zombie {
         string name;
         uint dna;
-    }
+    } //end struct Zombie {}
 } //end contract zombiefactory {}
