@@ -1,6 +1,10 @@
 pragma solidity ^0.4.25;
 import "./ZombieFactory.sol";
 
+contract KittyInterface {
+  
+} //interface to call getKitty() from cryptokitty's contract
+
 contract ZombieFeeding is ZombieFactory {
 
     function feedAndMultiply(uint _zombieId, uint _targetDna) public {
