@@ -2,8 +2,19 @@ pragma solidity ^0.4.25;
 import "./ZombieFactory.sol";
 
 contract KittyInterface {
-  
-} //interface to call getKitty() from cryptokitty's contract
+    function getKitty(uint256 _id) external view returns (
+        bool isGestating,
+        bool isReady,
+        uint256 cooldownIndex,
+        uint256 nextActionAt,
+        uint256 siringWithId,
+        uint256 birthTime,
+        uint256 matronId,
+        uint256 sireId,
+        uint256 generation,
+        uint256 genes
+    ); //end function getKitty()
+} //end contracty KittyInterface{} that calls getKitty() from cryptokitty's contract
 
 contract ZombieFeeding is ZombieFactory {
 
