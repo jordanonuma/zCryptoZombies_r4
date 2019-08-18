@@ -17,7 +17,7 @@ contract KittyInterface {
 } //end contracty KittyInterface{} that calls getKitty() from cryptokitty's contract
 
 contract ZombieFeeding is ZombieFactory {
-    KittyInterface kittyContract = KittyInterface(ckAddress);
+    KittyInterface kittyContract;
 
     function feedAndMultiply(uint _zombieId, uint _targetDna, string _species) public {
         require(msg.sender == zombieToOwner[_zombieId]);
