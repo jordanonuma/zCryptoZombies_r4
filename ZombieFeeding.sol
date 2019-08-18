@@ -17,7 +17,6 @@ contract KittyInterface {
 } //end contracty KittyInterface{} that calls getKitty() from cryptokitty's contract
 
 contract ZombieFeeding is ZombieFactory {
-    address ckAddress = 0x06012c8cf97BEaD5deAe237070F9587f8E7A266d;
     KittyInterface kittyContract = KittyInterface(ckAddress);
 
     function feedAndMultiply(uint _zombieId, uint _targetDna, string _species) public {
