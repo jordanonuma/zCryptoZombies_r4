@@ -27,6 +27,10 @@ contract ZombieFeeding is ZombieFactory {
         _zombie.readyTime = uint32(now + cooldownTime);
     } //end function _triggerCooldown()
 
+    function isReady(Zombie storage _zombie) internal view returns (bool) {
+    
+    } //end function isReady()
+
     function feedAndMultiply(uint _zombieId, uint _targetDna, string _species) public {
         require(msg.sender == zombieToOwner[_zombieId]);
         Zombie storage myZombie = zombies[_zombieId];
