@@ -24,4 +24,9 @@ contract ZombieOwnership is ZombieAttack, ERC721 {
         require(zombieToOwner[_tokenId] == msg.sender || zombieApprovals[_tokenId] == msg.sender);
         _transfer(_from, _to, _tokenId);
     } //end function transferFrom()
+
+    function approve(address _approved, uint256 _tokenId) external payable {
+
+    } //end function approve()
+
 } //end contract ZombieOwnership{}
