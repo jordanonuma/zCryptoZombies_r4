@@ -2,6 +2,10 @@ pragma solidity ^0.4.25;
 import "./ZombieAttack.sol";
 import "./ERC721.sol";
 
+/// @title A contract taht manages transfering zombie ownership
+/// @author this is me
+/// @dev using OpenZeppelin's ERC721 
+
 contract ZombieOwnership is ZombieAttack, ERC721 {
     mapping (uint => address) zombieApprovals;
 
