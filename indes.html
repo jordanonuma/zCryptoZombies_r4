@@ -21,7 +21,7 @@
         } //end function getZombieDetails()
 
         function getZombiesByOwner(owner) {
-        
+            return cryptoZombies.methods.getZombiesByOwner(owner).call()
         } //end function getZombiesByOwner()
 
         window.addEventListener('load', function() {
