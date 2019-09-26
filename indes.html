@@ -17,7 +17,7 @@
         } //end function startApp()
 
         function getZombieDetails(id) {
-
+            return cryptoZombies.methods.zombies(id).call()
         } //end function getZombieDetails()
         window.addEventListener('load', function() {
 
