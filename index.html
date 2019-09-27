@@ -9,7 +9,7 @@
   </head>
   <body>
     <div id="zombies"></div>
-    
+
     <script>
         var cryptoZombies;
 
@@ -17,6 +17,10 @@
             var cryptoZombiesAddress = "YOUR_CONTRACT_ADDRESS";
             cryptoZombies = new web3js.eth.Contract(cryptoZombiesABI, cryptoZombiesAddress);
         } //end function startApp()
+
+        function displayZombies(ids) {
+
+        } //end function displayZombies()
 
         function getZombieDetails(id) {
             return cryptoZombies.methods.zombies(id).call()
