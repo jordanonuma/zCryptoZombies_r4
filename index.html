@@ -77,7 +77,11 @@
       } //end function feedOnKitty()
 
       function levelUp(zombieId) {
-        
+        $("#txStatus").text("Leveling up your zombie...");
+        .send({ from: userAccount, value: web3js.utils.toWei("0.001", "ether") })
+        .on("receipt", function(receipt) {
+          $("#txStatus").text("Power overwhelming! Zombie succesfully leveled up!");
+        }) //end .on()
       } //end function levelUp()
 
       function getZombieDetails(id) {
