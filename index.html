@@ -76,31 +76,35 @@
         });
       } //end function feedOnKitty()
 
-        function getZombieDetails(id) {
-            return cryptoZombies.methods.zombies(id).call()
-        } //end function getZombieDetails()
+      function levelUp(zombieId) {
+        
+      } //end function levelUp()
 
-        function getZombiesByOwner(owner) {
-            return cryptoZombies.methods.getZombiesByOwner(owner).call()
-        } //end function getZombiesByOwner()
+      function getZombieDetails(id) {
+          return cryptoZombies.methods.zombies(id).call()
+      } //end function getZombieDetails()
 
-        window.addEventListener('load', function() {
+      function getZombiesByOwner(owner) {
+          return cryptoZombies.methods.getZombiesByOwner(owner).call()
+      } //end function getZombiesByOwner()
 
-        // Checking if Web3 has been injected by the browser (Mist/MetaMask)
-        if (typeof web3 !== 'undefined') {
-          // Use Mist/MetaMask's provider
-          web3js = new Web3(web3.currentProvider);
-        } else {
-          // Handle the case where the user doesn't have web3. Probably
-          // show them a message telling them to install Metamask in
-          // order to use our app.
+      window.addEventListener('load', function() {
 
-        } //end else()
+      // Checking if Web3 has been injected by the browser (Mist/MetaMask)
+      if (typeof web3 !== 'undefined') {
+        // Use Mist/MetaMask's provider
+        web3js = new Web3(web3.currentProvider);
+      } else {
+        // Handle the case where the user doesn't have web3. Probably
+        // show them a message telling them to install Metamask in
+        // order to use our app.
+
+      } //end else()
 
         // Now you can start your app & access web3js freely:
         startApp()
 
-        })        
+      }) //end if()        
     </script>
   </body>
 </html>
