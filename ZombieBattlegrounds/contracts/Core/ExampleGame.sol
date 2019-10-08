@@ -55,7 +55,7 @@ contract ExampleGame is ZBGameMode  {
                 } //end if()
             } //end for(j)
 
-            changes.changePlayerCardsInDeck(Player(i), newCards, cardCount);
+            changes.changePlayerCardsInDeck(Player(i), newCards, cardCount); //calls solidity function changePlayerCardsInDeck()
         } //end for(i)
     }  //end function beforeMatchStart()    
     
