@@ -58,6 +58,8 @@ contract ExampleGame is ZBGameMode  {
             changes.changePlayerCardsInDeck(Player(i), newCards, cardCount); //calls solidity function changePlayerCardsInDeck()
         } //end for(i)
     }  //end function beforeMatchStart()    
+
+    changes.emit();
     
     function isLegalCard(CardInstance card) internal view returns(bool) { //function is referenced in for() j loop above
         return (!bannedCards[card.mouldName]);
