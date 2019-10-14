@@ -31,8 +31,4 @@ contract Singleton is ZBGameMode  {
         changes.emit();
     } //end function beforeMatchStarts()
 
-    function isLegalCard(CardInstance card) internal view returns(bool) {
-        return(card.gooCost <= 2);
-    } //end function isLegalCard()
-
 } //end contract Singleton{}
