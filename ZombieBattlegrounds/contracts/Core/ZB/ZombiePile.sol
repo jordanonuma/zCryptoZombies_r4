@@ -1,7 +1,7 @@
 pragma solidity 0.4.25;
 import "./ZBGameMode.sol";
 
-contract Singleton is ZBGameMode  {
+contract ZombiePile is ZBGameMode  {
 
     function beforeMatchStart(bytes serializedGameState) external {
 
@@ -31,4 +31,4 @@ contract Singleton is ZBGameMode  {
         changes.emit();
     } //end function beforeMatchStarts()
 
-} //end contract Singleton{}
+} //end contract ZombiePile{}
