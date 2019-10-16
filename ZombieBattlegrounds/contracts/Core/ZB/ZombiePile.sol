@@ -19,12 +19,7 @@ contract ZombiePile is ZBGameMode  {
         // Custom game logic will go here
         for(uint i=0; i < gameState.playerStates.length; i++) {
             for (uint j = 0; j < gameState.playerStates[i].cardsInDeck.length; j++) {
-                bool cardAlreadyInDeck = false;
-
-                if(!cardAlreadyInDeck) {
-                    newCards[cardCount] = gameState.playerStates[i].cardsInDeck[j];
-                    cardCount++;
-                } //end if()
+                uint rand = uint(keccak256(abi.encodePacked(now, player1CardCount + player2CardCount))) % 2;
             } //end for(j)
 
             changes.changePlayerCardsInDeck(Player(i), newCards, cardCount); //calls solidity function changePlayerCardsInDeck()
