@@ -3,4 +3,8 @@ import "./ERC721XToken.sol";
 
 contract ZombieCard is ERC721XToken {
     
+    function name() external view returns(string) {
+      
+    }  //end function name()
+
 } //end contract ZombieCard {}
