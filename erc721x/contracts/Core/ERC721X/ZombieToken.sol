@@ -7,4 +7,7 @@ contract ZombieCard is ERC721XToken {
       return "ZombieCard";
     }  //end function name()
 
+    function symbol() external view returns(string) {
+
+    } //end function symbol()
 } //end contract ZombieCard {}
