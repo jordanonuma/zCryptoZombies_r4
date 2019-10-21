@@ -11,4 +11,8 @@ contract ZombieCard is ERC721XToken {
     function symbol() external view returns(string) {
         return "ZCX";
     } //end function symbol()
+
+    function individualSupply(uint _tokenId) public view returns(uint) {
+        
+    } //end function individualSupply()
 } //end contract ZombieCard {}
