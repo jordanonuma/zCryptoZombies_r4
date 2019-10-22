@@ -1,5 +1,6 @@
 pragma solidity ^0.4.25;
 import "./ERC721XToken.sol";
+import "./Ownable.sol";
 
 contract ZombieCard is ERC721XToken {
     mapping (uint => uint) internal tokenIdToIndividualSupply;
@@ -15,4 +16,8 @@ contract ZombieCard is ERC721XToken {
     function individualSupply(uint _tokenId) public view returns(uint) {
         return tokenIdToIndividualSupply[_tokenId];
     } //end function individualSupply()
+
+    function mintToken(uint _tokenId, uint _supply) public onlyOwner {
+
+    } //end function mintToken()
 } //end contract ZombieCard {}
