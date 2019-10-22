@@ -19,5 +19,7 @@ contract ZombieCard is ERC721XToken {
 
     function mintToken(uint _tokenId, uint _supply) public onlyOwner {
         require(!exists(_tokenId), "Error: Tried to mint duplicate token id");
+        _mint(_tokenId, msg.sender, _supply);
+        tokenIdToIndividualSupply[_tokenId] = _supply;
     } //end function mintToken()
 } //end contract ZombieCard {}
