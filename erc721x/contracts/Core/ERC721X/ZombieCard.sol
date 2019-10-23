@@ -23,4 +23,8 @@ contract ZombieCard is ERC721XToken {
         _mint(_tokenId, msg.sender, _supply);
         tokenIdToIndividualSupply[_tokenId] = _supply;
     } //end function mintToken()
+
+    function awardToken(uint _tokenId, address _to, uint _amount) public onlyOwner {
+        
+    } //end function awardToken()
 } //end contract ZombieCard {}
