@@ -28,6 +28,8 @@ contract ZombieCard is ERC721XToken {
         require(exists(_tokenId), "TokenID has not been minted");
         if(individualSupply[_tokenId] > 0) {
             require(_amount <= balanceOf(msg.sender, _tokenId), "Quantity greater than remaining cards");
+            _updateTokenBalance(_from, _tokenId, _amount, ObjectLib.Operations.SUB);
+            _updateTokenBalance(_to, _tokenId, amount, ObjectLib.Operations.ADD);
         } //end if()
     } //end function awardToken()
 } //end contract ZombieCard {}
