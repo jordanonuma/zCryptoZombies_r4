@@ -26,5 +26,8 @@ contract ZombieCard is ERC721XToken {
 
     function awardToken(uint _tokenId, address _to, uint _amount) public onlyOwner {
         require(exists(_tokenId), "TokenID has not been minted");
+        if(individualSupply[_tokenId] > 0) {
+
+        } //end if()
     } //end function awardToken()
 } //end contract ZombieCard {}
