@@ -31,7 +31,7 @@ contract ZombieCard is ERC721XToken {
             _updateTokenBalance(msg.sender, _tokenId, _amount, ObjectLib.Operations.SUB);
         } //end if()
         
-        _updateTokenBalance(_to, _tokenId, amount, ObjectLib.Operations.ADD);
+        _updateTokenBalance(_to, _tokenId, _amount, ObjectLib.Operations.ADD);
         emit TokenAwarded(_tokenId, _to, _amount);
     } //end function awardToken()
 } //end contract ZombieCard {}
