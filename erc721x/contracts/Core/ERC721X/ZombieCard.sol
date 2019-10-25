@@ -38,6 +38,7 @@ contract ZombieCard is ERC721XToken {
     } //end function awardToken()
 
     function convertToNFT(uint _tokenId, uint _amount) public {
-        
+        require(tokenType[_tokenId] == FT);
+        require(exists(_amount <= blanaceOf(msg.sender, _tokenId), "You do not own enough tokens");
     } //end function convertToNFT()
 } //end contract ZombieCard {}
