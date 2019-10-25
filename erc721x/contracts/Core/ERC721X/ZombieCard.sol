@@ -6,6 +6,7 @@ contract ZombieCard is ERC721XToken {
     mapping (uint => uint) internal tokenIdToIndividualSupply;
     mapping (uint => uint) internal nftTokenIdtoMouldId;
     event TokenAwarded(uint indexed tokenId, address claimer, uint amount);
+    uint nftTokenIdIndex = 1000000;
     
     function name() external view returns(string) {
         return "ZombieCard";
