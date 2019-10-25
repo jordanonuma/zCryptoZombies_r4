@@ -36,4 +36,8 @@ contract ZombieCard is ERC721XToken {
         _updateTokenBalance(_to, _tokenId, _amount, ObjectLib.Operations.ADD);
         emit TokenAwarded(_tokenId, _to, _amount);
     } //end function awardToken()
+
+    function convertToNFT(uint _tokenId, uint _amount) public {
+        
+    } //end function convertToNFT()
 } //end contract ZombieCard {}
