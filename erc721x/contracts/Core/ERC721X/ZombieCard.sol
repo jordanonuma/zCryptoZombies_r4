@@ -4,7 +4,7 @@ import "./Ownable.sol";
 
 contract ZombieCard is ERC721XToken {
     mapping (uint => uint) internal tokenIdToIndividualSupply;
-    mapping (uint => uint) internal nftTokenIdtoMouldId;
+    mapping (uint => uint) internal nftTokenIdToMouldId;
     event TokenAwarded(uint indexed tokenId, address claimer, uint amount);
     uint nftTokenIdIndex = 1000000;
     
@@ -39,6 +39,6 @@ contract ZombieCard is ERC721XToken {
 
     function convertToNFT(uint _tokenId, uint _amount) public {
         require(tokenType[_tokenId] == FT);
-        require(exists(_amount <= blanaceOf(msg.sender, _tokenId), "You do not own enough tokens");
+        require(_amount <= balanceOf(msg.sender, _tokenId), "You do not own enough tokens");
     } //end function convertToNFT()
 } //end contract ZombieCard {}
