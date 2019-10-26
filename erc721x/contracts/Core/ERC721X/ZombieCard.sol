@@ -41,6 +41,9 @@ contract ZombieCard is ERC721XToken {
         require(tokenType[_tokenId] == FT);
         require(_amount <= balanceOf(msg.sender, _tokenId), "You do not own enough tokens");
         _updateTokenBalance(msg.sender, _tokenId, _amount, ObjectLib.Operations.SUB);
-        
+        for (uint i = 0; i < _amount; i++) {
+            
+        } //end for()
+
     } //end function convertToNFT()
 } //end contract ZombieCard {}
