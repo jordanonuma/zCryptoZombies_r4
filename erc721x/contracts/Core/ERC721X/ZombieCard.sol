@@ -44,7 +44,7 @@ contract ZombieCard is ERC721XToken {
         for (uint i = 0; i < _amount; i++) {
             _mint(nftTokenIdIndex, msg.sender);
             nftTokenIdtoMouldId[nftTokenIdIndex] = _tokenId;
-            
+            nftTokenIdIndex++;
         } //end for()
 
     } //end function convertToNFT()
