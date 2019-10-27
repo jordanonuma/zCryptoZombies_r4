@@ -50,6 +50,7 @@ contract ZombieCard is ERC721XToken {
 
     function convertToFT(uint _tokenId) public {
         require(tokenType[_tokenId] == NFT);
+        require(ownerOf[_tokenId] == msg.sender, "You do not own this token")
         
     } //end function convertToFT()
 } //end contract ZombieCard {}
