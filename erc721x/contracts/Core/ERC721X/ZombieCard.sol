@@ -22,7 +22,7 @@ contract ZombieCard is ERC721XToken {
 
     function batchMintTokens(uint[] _tokenIds, uint[] _tokenSupplies) external onlyOwner {
         for (uint i = 0; i < _tokenIds.length; i++) {
-            
+            mintToken(_tokenIds[i], _tokenSupplies[i]);
         } //end for()
     } //end function batchMintTokens()
 
